@@ -1,0 +1,13 @@
+D:\java_project\flashsale\common\src\main\java\com\yestin\common\domain\UserInfo.java
+D:\java_project\flashsale\common\src\main\java\com\yestin\common\exception\CommonControllerAdvice.java
+D:\java_project\flashsale\common\src\main\java\com\yestin\common\web\Result.java
+D:\java_project\flashsale\common\src\main\java\com\yestin\common\web\CodeMsg.java
+D:\java_project\flashsale\common\src\main\java\com\yestin\redis\CommonRedisKey.java
+D:\java_project\flashsale\common\src\main\java\com\yestin\common\web\CommonCodeMsg.java
+D:\java_project\flashsale\common\src\main\java\com\yestin\common\web\anno\RequireLogin.java
+D:\java_project\flashsale\common\src\main\java\com\yestin\common\web\resolver\RequestUser.java
+D:\java_project\flashsale\common\src\main\java\com\yestin\common\web\interceptor\RequireLoginInterceptor.java
+D:\java_project\flashsale\common\src\main\java\com\yestin\common\exception\BusinessException.java
+D:\java_project\flashsale\common\src\main\java\com\yestin\common\constants\CommonConstants.java
+D:\java_project\flashsale\common\src\main\java\com\yestin\common\web\interceptor\FeignRequestInterceptor.java
+D:\java_project\flashsale\common\src\main\java\com\yestin\common\web\resolver\UserInfoMethodArgumentResolver.java

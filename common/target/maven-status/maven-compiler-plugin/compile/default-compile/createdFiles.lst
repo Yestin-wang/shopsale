@@ -1,0 +1,13 @@
+com\yestin\common\web\CommonCodeMsg.class
+com\yestin\common\web\interceptor\FeignRequestInterceptor.class
+com\yestin\common\exception\BusinessException.class
+com\yestin\common\web\anno\RequireLogin.class
+com\yestin\common\web\interceptor\RequireLoginInterceptor.class
+com\yestin\common\web\CodeMsg.class
+com\yestin\common\web\resolver\UserInfoMethodArgumentResolver.class
+com\yestin\common\domain\UserInfo.class
+com\yestin\common\exception\CommonControllerAdvice.class
+com\yestin\redis\CommonRedisKey.class
+com\yestin\common\web\Result.class
+com\yestin\common\constants\CommonConstants.class
+com\yestin\common\web\resolver\RequestUser.class
