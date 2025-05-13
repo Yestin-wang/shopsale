@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yestin.mapper.AccountLogMapper">
+    <insert id="insert">
+        insert into t_account_log (trade_no, out_trade_no, user_id, type, amount, gmt_time, info)
+        values (#{tradeNo}, #{outTradeNo}, #{userId}, #{type}, #{amount}, #{gmtTime}, #{info})
+    </insert>
+
+    <update id="changeStatus">
+        update t_account_log
+        <set>
+            status = #{status},
+            <choose>
+                <when test="status == 2">
+                    `timestamp` = UNIX_TIMESTAMP()
+                </when>
+                <otherwise>`timestamp` = #{status}</otherwise>
+            </choose>
+        </set>
+        where trade_no = #{tradeNo}
+    </update>
+
+    <select id="selectByPkAndType" resultType="com.yestin.domain.AccountLog">
+        select trade_no tradeNo,
+               pk_value pkValue,
+               type,
+               amount,
+               gmt_time gmtTime,
+               info,
+               tx_id,
+               action_id,
+               status, timestamp
+        from t_account_log
+        where pk_value = #{pkValue}
+          and type = #{type}
+    </select>
+    <select id="selectByPkAndStatus" resultType="com.yestin.domain.AccountLog">
+        select trade_no tradeNo,
+               pk_value pkValue,
+               type,
+               amount,
+               gmt_time gmtTime,
+               info,
+               tx_id,
+               action_id,
+               status, timestamp
+        from t_account_log
+        where pk_value = #{pk}
+          and status = #{status}
+    </select>
+    <select id="selectByTxId" resultType="com.yestin.domain.AccountLog">
+        select trade_no  tradeNo,
+               pk_value  pkValue,
+               type,
+               amount,
+               gmt_time  gmtTime,
+               info,
+               tx_id     txId,
+               action_id actionId,
+               status, timestamp
+        from t_account_log
+        where tx_id = #{txId}
+    </select>
+
+    <select id="selectByOutTradeNoAndType" resultType="com.yestin.domain.AccountLog">
+        select trade_no tradeNo, out_trade_no outTradeNo, user_id userId, type, amount, gmt_time gmtTime, info
+        from t_account_log
+        where out_trade_no = #{outTradeNo}
+          and type = #{type};
+    </select>
+</mapper>
