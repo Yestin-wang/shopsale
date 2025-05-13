@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: pay-service
+  cloud:
+    nacos:
+      config:
+        namespace: shopsale
+        server-addr: 192.168.19.100:8848 #nacos中心地址
+        file-extension: yaml # 配置文件格式
+        shared-configs:
+          - data-id: nacos-discovery-config-dev.yaml
+      discovery:
+        server-addr: 192.168.19.100:8848
+        namespace: shopsale
+  profiles:
+    active: dev # 环境标识
+
+
+alipay:
+  app_id : 2021000147688327
+  sign_type: RSA2
+  merchant_private_key: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDlXeQjWCmx/PTrDavP7kCWB5hApIU3VbaJGCBud1icuNdPk71EeSacTlC5nkUPF13Xgbg8sVhurInU14z3xaeNf8iqs3hA/N7wSZ3VV6HE6kZheKMW/JnYIw/omSZZpY5PNc6cvLyiRfM+1xQwuIwXSZfo8uixl19qTxrpapKT2HR61T2TM4M2XSQo8lCGEDb4/JAu299V1YxOh4wGovCN3+nL7NHUZ/me+bRY/YhAy2m3ZcGyp+donHjHIAudlUeUQABaDVho2ZO7mMjjzk4SYL3BA6d/+oMgiQRpvsRNso7X6DzpUjzXCMjREcuLpxvVHBzy5GpmDjm0YZUwp2jfAgMBAAECggEAEIsoJGB8iWj8ZWPUC6hcojWkBq2XKjmVc+f4lt8m1g8DAKtgUGsInOeNLQY8Zu1BiITDvCTygvEQ8/gkI87u2ebom19cght7HQvCRZwPf/uB3g/se4D2u78zq4w4Vuj5Db+MyoNWe8Hd3J94xlbZS+iz+0ph/EU1zZ4tC77zGZS1Qycj9ibLCl3qcnonNBVT1Mtu843B2lVWgmBLAK6r4o42qL/SNNabInwo3Cexh8f9aDivR2tnPeB+/fDTSVWuUhN903Jz4yvrqTx0ZM9zt/qdYDb6lFfpz9SxANzHNzYtkjlQ8hKWbOhdLnReg09f1cnIi8yANE653xmlduyQKQKBgQD3wNS+lZ7bo8DD3XMoXJjhh9uT0SSmaYwYeWV2ZE/VYMZW/aBphw2n6rKphfr1Kh4smrfonppA3RsT8JlkXJodZoWGw6sD8DvcdeljzWvaNSBdC8SeIUj6DFIUicoLp8XLJ4cz5XBjZUVDJXyhxv+uJ/0Smv0y9O8FhMqJywrL3QKBgQDtAGJZ/EtQzfggzTlrhTvEBhmwONnAoq1hb0ZLhYfg5BdJiJKLCQRRwOFRGlvlfWJiMrdMX3UAGvtBEhvKEW7c2wp4WFv5uXPOtrRX29loJJzAFnBUoXE+I7r7DinmMdhb5wePCFkvM8PzWRJgNps8ON3s9XF6qTt2zvIo/WmJ6wKBgDJ/fV1zRbPjBrFle8loRkkB1gGlCWFZ9hIu/D1LaPJHDWZBv+aCfogRUGU5R9OcyBWzW3TwjuRVrOU9jyZjsY34jZLQYxUkbC8dYXrULf2GApi0g1jv094TkM9a3nHNuoUUA3zScTvxMlLjWynmU8r9n5mhOaafQfDQBjBb0FGJAoGBANP3Qf9lLB8q976ujapiUN+y7Qq07dviIts/4EjvNmWm2kUEBrye5eQQc/RLdOE9UN6uqU1/Gm9rskeyYHRLPzH8HdMgg7JHcRHySj1B/aGtDRyndPPcKCIBZtvfAQ5GilE3wYTlXI5g5+IfSdYPQKuN2L5zjni8HtjVobOTYe7dAoGBAKgYDhVlkeZn1aOfaaw4tjWvheH6jX3symGGQtZFjj0+08HGTI9Kgwspnb3lkXs4xLBgta64b7Hn4/BuQKgiuN0QCJG6T6q5Lgd1KeuJGL8qC+0YNTWmtiLcB9tPDoZnwszoW7m63/jo84BsF/bI7sqlD8t2WtkUzCFpbBbv4eae
+  # 支付宝开放平台的支付宝公钥，不是应用公钥
+  alipay_public_key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAojik/i5zVjaB6dSUdbWs06w713VD80uo04uqld0wsceFK7nF8TGFcXZG/PqZv81dwTKqV46iGTib4O4wY5rc0Q3F/O0YLMk/mq1Xq2qMKa/bJv35DiD6SF0R9GgeABopIxCG/hic7Ca92bLOyGkm3V0VzDOIgDMIwHUcXZubuF+g69GH5WAQum+SDtpapvHRYplGMHUkoBr+OgkJob2d7d8CWga7DB/+F+ZWoLszt78XH6OBPhW+AajTdw+7gqO6f1rCIpi8rXXea8sZRIbsg78Lya0p0SJCQnZIPUbWlSI/7YBqhTNRxdpIM7P5HldPuvc8z2YTNcIC1u6aQHPpnQIDAQAB
+  charset: utf-8
+  gatewayUrl: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+  returnUrl:  http://9he26i.natappfree.cc/pay/alipay/return_url
+  notifyUrl:  http://9he26i.natappfree.cc/pay/alipay/notify_url
