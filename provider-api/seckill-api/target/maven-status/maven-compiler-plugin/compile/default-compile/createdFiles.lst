@@ -1,0 +1,11 @@
+com\yestin\domain\SeckillProduct.class
+com\yestin\redis\SeckillRedisKey.class
+com\yestin\mq\OrderMessage.class
+com\yestin\mq\MQConstant.class
+com\yestin\mq\DefaultSendCallback.class
+com\yestin\domain\OrderInfo.class
+com\yestin\domain\SeckillProductVo.class
+com\yestin\mq\RabbitMQConfig.class
+com\yestin\mq\OrderMQResult.class
+com\yestin\domain\PayLog.class
+com\yestin\domain\RefundLog.class
