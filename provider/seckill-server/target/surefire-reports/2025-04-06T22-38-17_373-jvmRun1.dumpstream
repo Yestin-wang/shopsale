@@ -1,0 +1,135 @@
+# Created at 2025-04-06T22:39:14.210
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+# Created at 2025-04-06T22:39:14.961
+Unexpected IOException with stream: 2025-04-06T22:39:14.961
+
+# Created at 2025-04-06T22:39:14.962
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:16.976
+Unexpected IOException with stream: 2025-04-06T22:39:16.975
+
+# Created at 2025-04-06T22:39:16.976
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:18.970
+Unexpected IOException with stream: 2025-04-06T22:39:18.969
+
+# Created at 2025-04-06T22:39:18.971
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:20.964
+Unexpected IOException with stream: 2025-04-06T22:39:20.963
+
+# Created at 2025-04-06T22:39:20.964
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:22.975
+Unexpected IOException with stream: 2025-04-06T22:39:22.975
+
+# Created at 2025-04-06T22:39:22.976
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:24.970
+Unexpected IOException with stream: 2025-04-06T22:39:24.969
+
+# Created at 2025-04-06T22:39:24.971
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:26.964
+Unexpected IOException with stream: 2025-04-06T22:39:26.963
+
+# Created at 2025-04-06T22:39:26.966
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:28.975
+Unexpected IOException with stream: 2025-04-06T22:39:28.975
+
+# Created at 2025-04-06T22:39:28.977
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:30.970
+Unexpected IOException with stream: 2025-04-06T22:39:30.970
+
+# Created at 2025-04-06T22:39:30.970
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:32.967
+Unexpected IOException with stream: 2025-04-06T22:39:32.966
+
+# Created at 2025-04-06T22:39:32.967
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:34.962
+Unexpected IOException with stream: 2025-04-06T22:39:34.961
+
+# Created at 2025-04-06T22:39:34.962
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:36.975
+Unexpected IOException with stream: 2025-04-06T22:39:36.975
+
+# Created at 2025-04-06T22:39:36.976
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:38.969
+Unexpected IOException with stream: 2025-04-06T22:39:38.969
+
+# Created at 2025-04-06T22:39:38.970
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:40.962
+Unexpected IOException with stream: 2025-04-06T22:39:40.962
+
+# Created at 2025-04-06T22:39:40.963
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:42.969
+Unexpected IOException with stream: 2025-04-06T22:39:42.969
+
+# Created at 2025-04-06T22:39:42.969
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:44.967
+Unexpected IOException with stream: 2025-04-06T22:39:44.967
+
+# Created at 2025-04-06T22:39:44.968
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:46.960
+Unexpected IOException with stream: 2025-04-06T22:39:46.960
+
+# Created at 2025-04-06T22:39:46.962
+Unexpected IOException with stream: 
+
+
+# Created at 2025-04-06T22:39:48.972
+Unexpected IOException with stream: 2025-04-06T22:39:48.971
+
+# Created at 2025-04-06T22:39:48.972
+Unexpected IOException with stream: 
+
+

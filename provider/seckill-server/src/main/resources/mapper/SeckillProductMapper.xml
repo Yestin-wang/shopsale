@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yestin.mapper.SeckillProductMapper">
+    <select id="queryCurrentlySeckillProduct" resultType="com.yestin.domain.SeckillProduct">
+        select id, product_id, seckill_price, stock_count, time, integral, start_date
+        from t_seckill_product
+--         where to_days(start_date) = to_days(now())
+        where to_days(start_date) = to_days('2020-12-03')
+          and time = #{time};
+    </select>
+    <update id="decrStock">
+        update t_seckill_product
+        set stock_count = stock_count - 1
+        where id = #{seckillId}
+    </update>
+    <!--乐观锁-->
+    <update id="ol_decrStock">
+        update t_seckill_product
+        set stock_count = stock_count - 1
+        where id = #{seckillId} and stock_count > 0
+    </update>
+    <update id="incrStock">
+        update t_seckill_product
+        set stock_count = stock_count + 1
+        where id = #{seckillId}
+    </update>
+    <select id="getStockCount" resultType="Long">
+        select stock_count
+        from t_seckill_product
+        where id = #{seckillId}
+    </select>
+
+    <select id="selectByIdAndTime" resultType="com.yestin.domain.SeckillProduct">
+        select id, product_id, seckill_price, stock_count, time, integral, start_date
+        from t_seckill_product
+        where id = #{seckillId}
+          and time = #{time}
+    </select>
+    <select id="selectById" resultType="com.yestin.domain.SeckillProduct">
+        select id, product_id, seckill_price, stock_count, time, integral, start_date
+        from t_seckill_product
+        where id = #{id}
+    </select>
+</mapper>
