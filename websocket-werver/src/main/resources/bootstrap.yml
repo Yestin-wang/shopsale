@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: websocket-service
+  cloud:
+    nacos:
+      config:
+        namespace: shopsale
+        server-addr: 192.168.19.100:8848 #nacos中心地址
+        file-extension: yaml # 配置文件格式
+        shared-configs:
+          - data-id: rabbitmq-config-dev.yaml
+          - data-id: nacos-discovery-config-dev.yaml
+      discovery:
+        server-addr: 192.168.19.100:8848
+        namespace: shopsale
+  profiles:
+    active: dev # 环境标识

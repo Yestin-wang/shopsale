@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>支付宝支付</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1677FF;
+        }
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .loading {
+            display: block;
+            margin: 20px auto;
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #1677FF;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>正在跳转到支付宝支付</h1>
+    <p>请稍候，正在为您跳转到支付页面...</p>
+    <div class="loading"></div>
+    <form name="punchout_form" method="post" action="https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=Xntl13RBv363nenkCd3quO8pkXYQrpAHjjiRLT74XnwYh5lZAJEeP6pFyNKvEOeYw%2FE3JfeiLQFB%2FpRPHVUW2AZxeOUXmzU0Mj3F48NWPJcOsJn%2BLUTt5XXGYXBh8bnoSDi5UvxEClnSXkvIY6v43MeWxSHRNnijCXKKbgc40FWmUNH8SXitR4lRprThITYGzojjOB8XXnHX08MXnrqjVWK0miLIU5Um%2F1uZYs0%2FImakxoiWw7X3hNBwCHdmmL6RpyzPvlwRNNuvjKuYdRxYfE1P%2B5hMFQ9G419kHpGnjrcLLqM0HZu7GRWLwDrAFFecOqO8dIYfloem90wIgbiuUA%3D%3D&return_url=http%3A%2F%2Fia74n3.natappfree.cc%2Fpay%2Falipay%2Freturn_url&notify_url=http%3A%2F%2Fia74n3.natappfree.cc%2Fpay%2Falipay%2Fnotify_url&version=1.0&app_id=2021000147688327&sign_type=RSA&timestamp=2025-04-11+20%3A40%3A31&alipay_sdk=alipay-sdk-java-dynamicVersionNo&format=json">
+        <input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;1910357381825429504&quot;,&quot;total_amount&quot;:&quot;3699.00&quot;,&quot;subject&quot;:&quot;测试订单&quot;,&quot;body&quot;:&quot;商品描述信息&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
+        <input type="submit" value="立即支付" style="display:none">
+    </form>
+</div>
+<script>
+    // 1秒后自动提交表单，给用户一个视觉反馈
+    setTimeout(function() {
+        document.forms[0].submit();
+    }, 1000);
+</script>
+</body>
+</html>
